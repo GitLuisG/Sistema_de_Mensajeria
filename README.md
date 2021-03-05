@@ -19,30 +19,34 @@
 
 ## Funciones
 - Enviar mensajes SMS
-- Enviar correos Electrónicos
-- Enviar mensajería por WhatsApp
+- Enviar correos ElectrÃ³nicos
+- Enviar mensajerÃ­a por WhatsApp
+- Enviar mensajeria via Facebook
+- Publicar en perfil de Facebook
 
 ## Requerimiento
-Desarrollar un algoritmo en el lenguaje de programación “PHP”,
+Desarrollar un algoritmo en el lenguaje de programaciÃ³n â€œPHPâ€, 
 El cual es interpretado por un servidor apache utilizado en el back-end. 
-Cuya funcionalidad principal sea la de notificar vía mensajes “SMS” 
-para los clientes de una base de datos usando una librería en general y “Correo” usando la librería open source “PHPMailer”,
-mediante un host, deberá comunicar al servidor de correos usando el protocolo 
+Cuya funcionalidad principal sea la de notificar vÃ­a mensajes â€œSMSâ€ 
+para los clientes de una base de datos usando una librerÃ­a en general y â€œCorreoâ€ usando la librerÃ­a open source â€œPHPMailerâ€, 
+mediante un host, deberÃ¡ comunicar al servidor de correos usando el protocolo 
 smtp (Simple Mail Transfer Protocol o Protocolo para Transferencia Simple de Correo) 
-la dirección de un mail para los clientes de la base de datos.
+la direcciÃ³n de un mail para los clientes de la base de datos.
+"Facebook" deberÃ¡ poder enviar mensajes vÃ­a Facebook Messenger ademÃ¡s de publicar nuevas publicaciones.
 
-## Librerías
+## LibrerÃ­as
 - PHPMAILER
 - TWILIO
+- API Facebook
 
-## Instalación
+## InstalaciÃ³n
 
 #### Paso 1
 ```
     Agregar las librerias PHPMailer a la raiz del proyecto
     y las agregamos con el comando.
 ```
-- Agregar librerías
+- Agregar librerÃ­as
 ```php
     //LIBRERIA TWILIO
     require 'Twilio/autoload.php';
