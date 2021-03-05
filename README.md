@@ -8,12 +8,13 @@
     </p>
     <br>
     <div>
-        <p align="center">Implementar <a href="#" >Mensajeria en un sistema de informacion</a> web transaccional</p>
+        <p align="center">Sistema de Mensajeria</p>
     </div>
     <div>
         <p align="center">
-            <a href="https://www.php.net/" target="_blank">PHP</a> | <a href="https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93controlador" target="_blank">MVC</a>
+            <a href="https://www.php.net/" target="_blank">PHP</a> | <a href="https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93controlador" target="_blank">MVC</a>| <a href="https://getbootstrap.com/" target="_blank">Boostrap 5</a> | <a href="https://api.jquery.com/jquery.ajax/" target="_blank">JQuery & Ajax</a>
         </p>
+        
     </div>
 </div>
 
