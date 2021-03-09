@@ -1,4 +1,6 @@
-
+<?php
+if(Acceso["Contactos"]["Ver"]){
+?>
 <div class="container">
     <h3 class="mt-5">Formulario de envio</h3>
     <a class="btn btn-info" href="?c=destinatario" role="button"><-</a>
@@ -25,20 +27,7 @@
         </div>
     </div>
 </div>
-<script>
-    
-    function validacion() {
-        var r = confirm("Desea enviar este mensaje!");
-        if (r == false) {
-            return false;
-        }
-    }
-    function Update() {
-        $.post("?c=destinatario&a=Listar", function (data) {
-            document.getElementById('obj').innerHTML = data;
-        });
-        
-    }
-    setInterval(Update, 1000);
-
-</script>
+<script src="<?php echo URL['URL'] . PATH_LIB['js']; ?>scripts_1.js"></script>
+<?php
+}
+?>

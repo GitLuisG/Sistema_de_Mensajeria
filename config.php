@@ -2,6 +2,7 @@
 
 define("URL",
         array(
+            "IMG" => "https://gitluisg.github.io/Img/", /* Estilos */
             "URL" => "https://gitluisg.github.io/cdn/", /* Estilos */
             "Ajax" => "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/",
             "JQuery" => "https://code.jquery.com/"
@@ -11,12 +12,13 @@ define("URL",
 //Librerias O assets
 define("PATH_LIB", array(
     "Imagenes" => 'static/',
+    "js" => 'static/js/',
     "Estilos" => 'b-5.0.0/css/',
     "Scripts" => 'b-5.0.0/js/',
     "PHPMailer" => 'PHPMailer/',
     "Facebook" => 'Facebook/',
-    "Componenent"=>"view/componentes/",
-    "VIEW"=>'view/',
+    "Componenent" => "view/componentes/",
+    "VIEW" => 'view/',
     "MODEL" => 'model/',
     "CONTROLLER" => 'controller/'
 ));
@@ -43,4 +45,31 @@ define("Correo_Config", array(
     "My_Email" => 'example@gmail.com',
     "Password" => 'Example3'
 ));
+
+define("Acceso", array(
+    "SMS" => array(
+        "Enviar" => true,
+        "Ver" => true,
+    ),
+    "Correo" => array(
+        "Enviar" => true,
+        "Ver" => true,
+    ),
+    "Whatsapp" => array(
+        "Enviar" => true,
+        "Ver" => true,
+    ),
+    "Facebook" => array(
+        "Enviar" => true,
+        "Ver" => true,
+    )
+    , "Destinatario" => array(
+        "Enviar" => true,
+        "Ver" => true,
+    ),
+    "Contactos" => array(
+        "Enviar" => true,
+        "Ver" => true,
+    )
+))
 ?>

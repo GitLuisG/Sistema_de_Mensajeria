@@ -1,4 +1,5 @@
 <?php
+
 /*
   PHP Version 7.4.8
   Institucion: Universidad poitecnica de victoria
@@ -10,7 +11,7 @@
   Copyright (c) 2021 Luis Gerardo Perales Torres
  */
 
-require PATH_LIB['MODEL'].'sms.php';
+require PATH_LIB['MODEL'] . 'sms.php';
 
 class SmsController {
 
@@ -20,27 +21,39 @@ class SmsController {
     private $lada;
 
     public function Index() {
-        require_once PATH_LIB['Componenent'].'header.php';
+        require_once PATH_LIB['Componenent'] . 'header.php';
         require_once 'view/sms/sms.php';
-        require_once PATH_LIB['Componenent'].'footer.php';
+        require_once PATH_LIB['Componenent'] . 'footer.php';
     }
-    
-    public function Listar(){
+
+    public function Listar() {
+        $contactos = new Sms();
+        $rs = $contactos->consultar();
+        if ($rs) {
+            foreach ($rs as $element) {
+                echo "
+                <option value='" . $element[0] . "'>" . $element[2] . "</option>
+                ";
+            }
+        } else {
+            echo "
+               <option>No Tiene contactos agregados</option>
+                ";
+        }
+    }
+
+    public function Insertar() {
         
     }
-    
-    public function Insertar(){
+
+    public function Editar() {
         
     }
-    
-    public function Editar(){
+
+    public function Modificar() {
         
     }
-    
-    public function Modificar(){
-        
-    }
-    
+
     public function Actualizar() {
         
     }
@@ -68,11 +81,11 @@ class SmsController {
         }
         header('Location: ?c=sms');
     }
-    
+
     public function bandeja() {
-        require_once PATH_LIB['Componenent'].'header.php';
+        require_once PATH_LIB['Componenent'] . 'header.php';
         require_once 'view/sms/bandeja.php';
-        require_once PATH_LIB['Componenent'].'footer.php';
+        require_once PATH_LIB['Componenent'] . 'footer.php';
     }
 
 }

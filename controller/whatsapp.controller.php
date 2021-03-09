@@ -25,7 +25,19 @@ class WhatsappController {
     }
 
     public function Listar() {
-        
+        $contactos = new Whatsapp();
+        $rs = $contactos->consultar();
+        if ($rs) {
+            foreach ($rs as $element) {
+                echo "
+                <option value='" . $element[0] . "'>" . $element[2] . "</option>
+                ";
+            }
+        } else {
+            echo "
+               <option>No Tiene contactos agregados</option>
+                ";
+        }
     }
 
     public function Insertar() {

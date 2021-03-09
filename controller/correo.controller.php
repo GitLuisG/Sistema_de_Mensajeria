@@ -24,8 +24,21 @@ class CorreoController {
     }
     
         
-    public function Listar(){
-        
+    public function Listar() {
+        header('Content-Type: application/json');
+        $contactos = new Correo();
+        $rs = $contactos->consultar();
+        if ($rs) {
+            foreach ($rs as $element) {
+                echo "
+                <option value='" . $element[0] . "'>" . $element[3] . "</option>
+                ";
+            }
+        } else {
+            echo "
+               <option>No Tiene contactos agregados</option>
+                ";
+        }
     }
     
     public function Insertar(){

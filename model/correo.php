@@ -1,4 +1,5 @@
 <?php
+
 /*
   PHP Version 7.4.8
   Institucion: Universidad poitecnica de victoria
@@ -10,10 +11,16 @@
   Copyright (c) 2021 Luis Gerardo Perales Torres
  */
 
-Class Correo {
+Class Correo extends Database{
 
-    public function __construct($host) {
-
+    public function consultar() {
+        $this->sql = "SELECT * FROM `destinatarios`;";
+        $rs = $this->procesar_query($this->sql, true);
+        if ($rs == NULL) {
+            return false;
+        } else {
+            return $rs[0];
+        }
     }
 
 }

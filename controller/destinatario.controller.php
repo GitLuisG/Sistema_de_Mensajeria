@@ -30,6 +30,7 @@ class DestinatarioController {
     }
 
     public function Insertar() {
+        header('Content-Type: application/json');
         $this->DUsuario = array(
             "Nombre" => $_POST['Nombre'],
             "Lada" => '+52',

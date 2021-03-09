@@ -11,10 +11,16 @@
   Copyright (c) 2021 Luis Gerardo Perales Torres
  */
 
-Class Sms {
+Class Sms extends Database{
 
-    public function __construct() {
-        
+    public function consultar() {
+        $this->sql = "SELECT * FROM `destinatarios`;";
+        $rs = $this->procesar_query($this->sql, true);
+        if ($rs == NULL) {
+            return false;
+        } else {
+            return $rs[0];
+        }
     }
 
 }

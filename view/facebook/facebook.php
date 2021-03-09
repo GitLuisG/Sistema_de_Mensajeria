@@ -24,7 +24,7 @@
                                                      " alt="" class="d-inline-block align-top"><!-- Logito -->
                                                 En la paguina
                                             </span>
-                                            <textarea cols="60" rows="5" style="resize: both;" name="pub" class="form-control"></textarea>
+                                            <textarea cols="60" rows="5" name="pub" class="form-control"></textarea>
                                             <button type="submit" value="Enviar" class="btn btn-primary" id="btn-signup"> 
                                                 <span class="glyphicon glyphicon-log-in">
                                                     Publicar</span>
@@ -39,7 +39,7 @@
                                                      " alt="" class="d-inline-block align-top"><!-- Logito -->
                                                 Via Mensaje
                                             </span>
-                                            <textarea cols="60" rows="5" style="resize: both;" name="men" class="form-control"></textarea>
+                                            <textarea cols="60" rows="5" name="men" class="form-control"></textarea>
                                             <button type="submit" value="Enviar" class="btn btn-primary" id="btn-signup"> 
                                                 <span class="glyphicon glyphicon-log-in">
                                                     Enviar Mensaje</span>
