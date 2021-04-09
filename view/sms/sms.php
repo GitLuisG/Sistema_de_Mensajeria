@@ -1,41 +1,40 @@
 <?php
-if(Acceso["Contactos"]["Ver"]){
-?>
-<div class="container">
-    <h3 class="mt-5">Formulario de envio</h3>
-    <a class="btn btn-info" href="?c=sms&a=bandeja" role="button">Bandeja de Entrada</a>
+if (Acceso["Contactos"]["Ver"]) {
+    ?>
+    <div class="container">
+        <h3 class="mt-5">Formulario de envio</h3>
 
-    <hr>
-    <div class="row">
-        <div class="col-12 col-md-12"> 
-            <!-- Contenido -->
-            <div class="signup-form-container"> 
-                <!-- form start -->
-                <form onsubmit="return validacion()" action="?c=sms&a=Insertar" method="POST" autocomplete="on">
-                    <div class="form-header">
-                        <h3 class="form-title"><i class="fa fa-user"></i>
-                            <span class="glyphicon glyphicon-user"></span>SMS</h3>
-                    </div>
-                    <div class="form-body">
-                        <div class="form-group">
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend"> 
-                                    <span class="input-group-text" id="basic-addon1">
-                                        <img src="
-                                             <?php echo URL['URL'] . PATH_LIB['Imagenes']; ?>Phone.svg
-                                             " alt="" width="30" height="24" class="d-inline-block align-top"><!-- Logito -->
-                                        </div>
-
-                                        <select name="cel" id="celular" class="form-control">
-                                            <option selected="selected" disabled="disabled">Seleccione un contacto</option>
-                                            <?php echo $this->Listar(); ?>
-                                        </select>
+        <hr>
+        <div class="row">
+            <div class="col-12 col-md-12"> 
+                <!-- Contenido -->
+                <div class="signup-form-container"> 
+                    <!-- form start -->
+                    <form onsubmit="return validacion()" action="?c=sms&a=Enviar" method="POST" autocomplete="on">
+                        <div class="form-header">
+                            <h3 class="form-title"><i class="fa fa-user"></i>
+                                <span class="glyphicon glyphicon-user"></span>SMS</h3>
+                        </div>
+                        <div class="form-body">
+                            <div class="form-group">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend"> 
+                                        <span class="input-group-text" id="basic-addon1">
+                                            <img src="
+                                                 <?php echo URL['URL'] . PATH_LIB['Imagenes']; ?>Phone.svg
+                                                 " alt="" width="30" height="24" class="d-inline-block align-top"><!-- Logito -->
+                                        </span>
+                                    </div>
+                                    <select name="cel" id="celular" class="form-control">
+                                        <option selected="selected" disabled="disabled">Seleccione un contacto</option>
+                                        <?php echo $this->ListarXNumero(); ?>
+                                    </select>
                                 </div>
                             </div>
 
                             <div class="row">
                                 <div class="form-group">
-                                    <div class="input-group mb-3">
+                                    <div class="input-group mb-5">
                                         <div class="input-group-prepend"> 
                                             <span class="input-group-text" id="basic-addon1">
                                                 <img src="
@@ -56,12 +55,12 @@ if(Acceso["Contactos"]["Ver"]){
                                 Enviar Mensaje 
                             </button>
                         </div>
-                </form>
+                    </form>
+                </div>
+                <!-- Fin Contenido --> 
             </div>
-            <!-- Fin Contenido --> 
         </div>
     </div>
-</div>
-<?php
+    <?php
 }
 ?>

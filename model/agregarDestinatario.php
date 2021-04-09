@@ -10,7 +10,9 @@
   Licencia: MIT License
   Copyright (c) 2021 Luis Gerardo Perales Torres
  */
-
+/*
+ * Patron de dise;o: Dao (Data Acess object)
+ */
 Class destinatario extends Database {
 
     public $sql;

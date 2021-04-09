@@ -6,7 +6,7 @@
             <!-- Contenido -->
             <div class="signup-form-container"> 
                 <!-- form start -->
-                <form onsubmit="return validacion()" action="?c=Whatsapp&a=Enviar" method="POST" autocomplete="on">
+                <form onsubmit="return validacion()" action="?c=whatsapp&a=Enviar" method="POST" autocomplete="on">
                     <div class="form-header">
                         <h3 class="form-title"><i class="fa fa-user"></i>
                             <span class="glyphicon glyphicon-user"></span>WhatsApp</h3>

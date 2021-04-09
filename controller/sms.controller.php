@@ -19,6 +19,7 @@ class SmsController {
     private $mensaje;
     private $sms;
     private $lada;
+    private $contactos;
 
     public function Index() {
         require_once PATH_LIB['Componenent'] . 'header.php';
@@ -26,8 +27,24 @@ class SmsController {
         require_once PATH_LIB['Componenent'] . 'footer.php';
     }
 
-    public function Listar() {
-        $contactos = new Sms();
+    public function ListarXNombre() {
+        $contactos = new Smsapp();
+        $rs = $contactos->consultar();
+        if ($rs) {
+            foreach ($rs as $element) {
+                echo "
+                <option value='" . $element[0] . "'>" . $element[1] . "</option>
+                ";
+            }
+        } else {
+            echo "
+               <option>No Tiene contactos agregados</option>
+                ";
+        }
+    }
+
+    public function ListarXNumero() {
+        $contactos = new Smsapp();
         $rs = $contactos->consultar();
         if ($rs) {
             foreach ($rs as $element) {
@@ -65,20 +82,8 @@ class SmsController {
         );
         $this->cell = $formulario['Cell'];
         $this->mensaje = $formulario['Mensaje'];
-        $this->sms = new Sms();
-        $this->sms->set_Telefono('+52', $this->cell, $this->mensaje);
-        if ($this->sms->getcell()) {
-            if ($this->sms->getmensaje()) {
-                $this->sms->setNum_Company('+15023834553');
-                $this->sms->set_ACOUNT_SID('ACf812855c7b927ac82f6d44e2fbf277e2');
-                $this->sms->set_AUTH_TOKEN('62d65d753fc422e1b616b440966120cd');
-                $this->sms->ValidarEnvio(true);
-            } else {
-                echo '<script>alert("no se encontro el mensaje")</script>';
-            }
-        } else {
-            echo '<script>alert("no se encontro el cell")</script>';
-        }
+        $sms = new Smsapp();
+        $sms->Enviar($this->cell, $this->mensaje);
         header('Location: ?c=sms');
     }
 

@@ -1,4 +1,5 @@
 <?php
+
 /*
   PHP Version 7.4.8
   Institucion: Universidad poitecnica de victoria
@@ -22,11 +23,10 @@ class CorreoController {
         require_once 'view/correo/correo.php';
         require_once 'view/componentes/footer.php';
     }
-    
-        
+
     public function Listar() {
         header('Content-Type: application/json');
-        $contactos = new Correo();
+        $contactos = new Correoapp();
         $rs = $contactos->consultar();
         if ($rs) {
             foreach ($rs as $element) {
@@ -40,31 +40,26 @@ class CorreoController {
                 ";
         }
     }
-    
-    public function Insertar(){
+
+    public function Insertar() {
         
     }
-    
-    public function Modificar(){
+
+    public function Modificar() {
         
     }
-    
+
     public function Actualizar() {
         
     }
 
-
     public function Enviar() {
         $formulario = array(
-            "Cell" => $_POST['cel'],
+            "Cell" => $_POST['correo'],
             "Mensaje" => $_POST['men']
         );
-        $send = new Correo(Correo_Config['HOST']);
-        $send->set_Email(Correo_Config['My_Email']);
-        $send->set_Password(Correo_Config['Password']);
-        $send->messenger("Mensaje Importante", $formulario['Mensaje'], "hgsjdg");
-        $send->set_recipient($formulario['Cell']);
-        $send->Enviar();
+        $contactos = new Correoapp();
+        $contactos->enviar($formulario["Cell"], $formulario["Mensaje"]);
         header('Location: ?c=correo');
     }
 

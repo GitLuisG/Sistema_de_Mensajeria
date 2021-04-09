@@ -10,8 +10,9 @@
   Licencia: MIT License
   Copyright (c) 2021 Luis Gerardo Perales Torres
  */
+require 'extenciones/sms.php';
 
-Class Sms extends Database{
+Class Smsapp extends Database{
 
     public function consultar() {
         $this->sql = "SELECT * FROM `destinatarios`;";
@@ -20,6 +21,23 @@ Class Sms extends Database{
             return false;
         } else {
             return $rs[0];
+        }
+    }
+    
+    public function Enviar() {
+        $this->sms = new Sms();
+        $this->sms->set_Telefono('+52', $cell, $mensaje);
+        if ($this->sms->getcell()) {
+            if ($this->sms->getmensaje()) {
+                $this->sms->setNum_Company(NUMBER_COMPANY);
+                $this->sms->set_ACOUNT_SID(ACOUNT_SID);
+                $this->sms->set_AUTH_TOKEN(AUTH_TOKEN);
+                $this->sms->ValidarEnvio(true);
+            } else {
+                echo '<script>alert("no se encontro el mensaje")</script>';
+            }
+        } else {
+            echo '<script>alert("no se encontro el cell")</script>';
         }
     }
 

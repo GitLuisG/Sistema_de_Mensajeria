@@ -11,7 +11,9 @@
   Copyright (c) 2021 Luis Gerardo Perales Torres
  */
 
-Class Whatsapp extends Database {
+require 'extenciones/whatsapp.php';
+
+Class Whatsappapp extends Database {
 
     public $sql;
 
@@ -22,6 +24,23 @@ Class Whatsapp extends Database {
             return false;
         } else {
             return $rs[0];
+        }
+    }
+
+    public function enviar($cell, $mensaje) {
+        $mensaje = new Whatsapp();
+        $mensaje->set_Telefono('+521', $cell, $mensaje);
+        $mensaje->setNum_Company(NUMBER_COMPANY);
+        $mensaje->set_ACOUNT_SID(ACOUNT_SID);
+        $mensaje->set_AUTH_TOKEN(AUTH_TOKEN);
+        if ($mensaje->getcell()) {
+            if ($mensaje->getmensaje()) {
+                $mensaje->ValidarEnvio(true);
+            } else {
+                echo 'no se encontro el mensaje <br>';
+            }
+        } else {
+            echo 'no se encontro el nombre <br>';
         }
     }
 
