@@ -2,8 +2,8 @@
 
 define("URL",
         array(
-            "IMG" => "https://gitluisg.github.io/Img/", /* Estilos */
-            "URL" => "https://gitluisg.github.io/cdn/", /* Estilos */
+            "IMG" => "view/assets/", /* Estilos */
+            "URL" => "view/assets/", /* Estilos */
             "Ajax" => "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/",
             "JQuery" => "https://code.jquery.com/"
         )
