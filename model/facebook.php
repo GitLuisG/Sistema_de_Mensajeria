@@ -31,8 +31,14 @@ Class Facebook {
         $this->App->Enviar_Publicar();
     }
 
-    public function enviar_Mensaje($Mensaje) {
+    public function enviar_Mensaje($Mensaje,$id) {
+        $this->App->set_Id($id);
+        $this->App->set_MensajeMessager($Mensaje);
         $this->App->Enviar_Mensaje();
+    }
+    
+    public function get_ids(){
+        return $this->App->get_Friends();
     }
 
 }

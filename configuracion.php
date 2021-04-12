@@ -2,8 +2,8 @@
 
 define("URL",
         array(
-            "IMG" => "https://gitluisg.github.io/Img/", /* Estilos */
-            "URL" => "https://gitluisg.github.io/cdn/", /* Estilos */
+            "IMG" => "view/assets/", /* Estilos */
+            "URL" => "view/assets/", /* Estilos */
             "Ajax" => "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/",
             "JQuery" => "https://code.jquery.com/"
         )
@@ -25,8 +25,8 @@ define("PATH_LIB", array(
 
 //Configuraciones del facebook
 define("Face_Config", array(
-    "APP_ID" => "111269454348541",
-    "PAGE_ACCESS_TOKEN" => "EAAHDJ37IA2EBAIwPqGHvtVifs3lUk6rTiuXqLOk3ounVAocstYqxDtq6JWoVlOSVqKzZAgUpr6VJckR76o0HVN3LLZAAeEQvSufJKDtottBtFOdQx5jSdmoSMg82f2nsUqZCeZBrvL8gM2fAn7EIsxDTssS5wchWLqpuJBEZAMi2R7KKu3XbLnzqVXftRl3EZD",
+    "APP_ID" => "496049374888801",
+    "PAGE_ACCESS_TOKEN" => "EAAHDJ37IA2EBADI3hGG7XSlK93ROVXTdpvq10D4nxUPooCnfIWNzMcbAvgZBwpteBfUkPtrVf3BqJye3bsSKzLSnjnhHVUepmznYvtVtqZBawZAl2zm7uV0xujj3HZCsuAWKCNhmR52VFb6OB8XZA814KLkHyuZAZBUpvIESXhmnxAllCIZCpFtcTpkPlxalxlgZD",
     "APP_SECRET" => "279d06f32ed1bace37184e24be52077c"
 ));
 
@@ -39,11 +39,11 @@ define("AUTH_TOKEN", "62d65d753fc422e1b616b440966120cd");
 define("NUMBER_COMPANY", "+15023834553");
 
 //Correos
-//Dirección a la que responderá el destinatario
+//DirecciÃ³n a la que responderÃ¡ el destinatario
 define("Correo_Config", array(
     'HOST' => 'smtp.gmail.com',
-    "My_Email" => 'example@gmail.com',
-    "Password" => 'Example3'
+    "My_Email" => 'correousertb@gmail.com',
+    "Password" => 'Luisgerardo3'
 ));
 
 define("Acceso", array(

@@ -11,4 +11,3 @@
 </div>
 </body>
 <script src="<?php echo URL['URL'] . PATH_LIB['Scripts']; ?>bootstrap.min.js"></script>
-<script src="<?php echo URL['URL'] . PATH_LIB['js']; ?>scripts_1.js"></script>

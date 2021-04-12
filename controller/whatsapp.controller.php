@@ -25,7 +25,7 @@ class WhatsappController {
     }
 
     public function Listar() {
-        $contactos = new Whatsapp();
+        $contactos = new Whatsappapp();
         $rs = $contactos->consultar();
         if ($rs) {
             foreach ($rs as $element) {
@@ -61,22 +61,8 @@ class WhatsappController {
             "Cell" => $_POST['cel'],
             "Mensaje" => $_POST['men']
         );
-        $this->cell = $formulario['Cell'];
-        $this->mensaje = $formulario['Mensaje'];
-        $mensaje = new Whatsapp();
-        $mensaje->set_Telefono('+521', $this->cell, $this->mensaje);
-        $mensaje->setNum_Company('+14155238886');
-        $mensaje->set_ACOUNT_SID('ACf812855c7b927ac82f6d44e2fbf277e2');
-        $mensaje->set_AUTH_TOKEN('62d65d753fc422e1b616b440966120cd');
-        if ($mensaje->getcell()) {
-            if ($mensaje->getmensaje()) {
-                $mensaje->ValidarEnvio(true);
-            } else {
-                echo 'no se encontro el mensaje <br>';
-            }
-        } else {
-            echo 'no se encontro el nombre <br>';
-        }
+        $contactos = new Whatsappapp();
+        $rs = $contactos->enviar($formulario['Cell'], $formulario['Mensaje']);
         header('Location: ?c=whatsapp');
     }
 
