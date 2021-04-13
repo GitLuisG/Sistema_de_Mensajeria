@@ -24,7 +24,7 @@ Class Smsapp extends Database{
         }
     }
     
-    public function Enviar() {
+    public function Enviar($cell, $mensaje) {
         $this->sms = new Sms();
         $this->sms->set_Telefono('+52', $cell, $mensaje);
         if ($this->sms->getcell()) {
