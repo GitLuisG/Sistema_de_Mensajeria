@@ -11,13 +11,13 @@
  */
 
 
-//conexion de bd aplicando patron de diseño singleton...
+//conexion de bd aplicando patron de diseÃ±o singleton...
 class Database {
 
     private $conexion;
     private $servidor = "localhost";
-    private $clave = "";
-    private $usuario = "root";
+    private $clave = "BistecAsado3-Luis";
+    private $usuario = "root2";
     private $bd = "mensajeria";
     private $charset = "utf8";
     private $query;
