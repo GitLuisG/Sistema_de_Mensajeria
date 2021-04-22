@@ -11,7 +11,7 @@
   Copyright (c) 2021 Luis Gerardo Perales Torres
  */
 
-require PATH_LIB['MODEL'].'Whatsapp.php';
+require PATH_LIB['MODEL'].'whatsapp.php';
 
 class WhatsappController {
 
