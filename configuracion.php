@@ -42,8 +42,8 @@ define("NUMBER_COMPANY", "+15023834553");
 //Dirección a la que responderá el destinatario
 define("Correo_Config", array(
     'HOST' => 'smtp.gmail.com',
-    "My_Email" => 'correousertb@gmail.com',
-    "Password" => 'Luisgerardo3'
+    "My_Email" => '',
+    "Password" => ''
 ));
 
 define("Acceso", array(
